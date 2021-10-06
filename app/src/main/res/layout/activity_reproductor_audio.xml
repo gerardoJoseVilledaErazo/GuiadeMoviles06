@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReproductorAudioActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:id="@+id/tiempo">
+
+        <TextView
+            android:id="@+id/txvInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="28sp"
+            android:layout_marginLeft="16dp"
+            android:text="00:00"/>
+
+        <TextView
+            android:id="@+id/txvActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="28sp"
+            android:text="00:00"/>
+
+        <TextView
+            android:id="@+id/txvFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="28sp"
+            android:text="00:00"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
+<!--
+
+        <TextView
+            android:id="@+id/txtCargar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Ejemplo SeekBar"
+            android:textColor="#000"
+            android:textSize="50sp"  />
+
+-->
+
+        <SeekBar
+            android:id="@+id/audioTraverse"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/gestionar_seekbar"
+            android:background="#ccc"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btnIniciar"
+            android:text="@string/Start"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"/>
+
+        <Button
+            android:id="@+id/btnReiniciar"
+            android:text="@string/Restart"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

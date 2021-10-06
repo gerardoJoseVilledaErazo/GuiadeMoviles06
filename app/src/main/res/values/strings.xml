@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Hilos</string>
+    <string name="MyData">Ver Datos</string>
+
+
+    <string name="DevBy">Desarrollado por:</string>
+    <string name="Dev">Developer</string>
+    <string name="Name">Nombre:</string>
+    <string name="MyName">Gerardo José Villeda Erazo</string>
+    <string name="Code">Código:</string>
+    <string name="MyCode">VE16I04001@usonsonate.edu.sv</string>
+
+    <string name="Start">Iniciar</string>
+    <string name="Restart">Reiniciar</string>
+    <string name="Audio">Reproductor de Audio</string>
+</resources>
