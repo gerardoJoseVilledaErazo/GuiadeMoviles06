@@ -1,8 +1,11 @@
 package com.example.hilos.utils;
 
 import android.content.Context;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
+import android.os.Handler;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.hilos.R;
@@ -29,9 +32,14 @@ public class AudioAsincrono extends AsyncTask<Void, String, String> {
     protected String doInBackground(Void... voids) {
 
         reproductorMusica.start();
+        //playCycle();
+
         while( reproductorMusica.isPlaying() ) {
-            esperaUnSegundo();
+
+            //esperaUnSegundo();
+
             publishProgress(tiempo(reproductorMusica.getCurrentPosition() ) );
+
             if ( pause == true ){
                 synchronized (VIGILANTE){
                     try{
@@ -41,14 +49,15 @@ public class AudioAsincrono extends AsyncTask<Void, String, String> {
                     }catch (InterruptedException ie) {
                         ie.printStackTrace();
                     }
+
                     pause = false;
                     reproductorMusica.start();
+                    //playCycle();
                 }
             }
         }
         return null;
     }
-
 
     private void esperaUnSegundo() {
         try{
@@ -66,15 +75,18 @@ public class AudioAsincrono extends AsyncTask<Void, String, String> {
     public void reiniciarAudio() {
         synchronized (VIGILANTE){
             VIGILANTE.notify();
+
             reproductorMusica.reset();
         }
     }
 
     public void pausarAudio() {
+
         pause = true;
     }
 
     public boolean esPause() {
+
         return pause;
     }
 

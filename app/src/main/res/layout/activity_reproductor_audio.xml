@@ -61,12 +61,13 @@
 -->
 
         <SeekBar
-            android:id="@+id/audioTraverse"
+            android:id="@+id/seekBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:progressDrawable="@drawable/gestionar_seekbar"
             android:background="#ccc"
+            android:secondaryProgressTint="@color/design_default_color_on_primary"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"/>
 
