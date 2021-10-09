@@ -30,8 +30,9 @@ public class ReproductorAudioActivity extends AppCompatActivity {
     private TextView txvActual, txvFinal;
     private AudioAsincrono audioAsincrono;
 
+    //private ProgressBar progressBar;
     //private ProgressBar pb;
-    //private TextView mostrarPorcentaje;
+    //private TextView mostrarPorcentaje, txvPercentage;
     //private SeekBar audioTraverse;
 
     private SeekBar seekbar;
@@ -52,6 +53,7 @@ public class ReproductorAudioActivity extends AppCompatActivity {
         txvFinal  = findViewById(R.id.txvFinal);
         btnIniciar = findViewById(R.id.btnIniciar);
         btnReiniciar = findViewById(R.id.btnReiniciar);
+        //txvPercentage = findViewById(R.id.txvPorcentaje);
 
         //handler
         handler = new Handler();
@@ -122,6 +124,7 @@ public class ReproductorAudioActivity extends AppCompatActivity {
             reiniciar();
         });
     }
+    //Fin OnCreate
 
     public void playCycle(){
         // Valor Inicial
